@@ -9,6 +9,7 @@ public class BasicCoreProgram {
         System.out.println("3] POWER OF 2 PROGRAM");
         System.out.println("4] HARMONIC NUMBER PROGRAM");
         System.out.println("5] PRIME FACTORIZATION PROGRAM");
+        System.out.println("6] COMPUTE QUOTIENT & REMAINDER");
         System.out.println("ENTER SR NUMBER PROGRAM");
         int Number = scan.nextInt();
         switch (Number) {
@@ -78,28 +79,34 @@ public class BasicCoreProgram {
             case 5:
                 System.out.println("ENTER THE N VALUE");
                 int N = scan.nextInt();
-                ArrayList<Integer> prime=new ArrayList<>();
+                ArrayList<Integer> prime = new ArrayList<>();
                 while (N % 2 == 0) {
                     N /= 2;
                     prime.add(2);
                 }
                 System.out.println("");
-                for (int i = 3; i <= N; i+= 2)
-                {
-                    while (N%i==0)
-                    {
+                for (int i = 3; i <= N; i += 2) {
+                    while (N % i == 0) {
                         prime.add(i);
-                        N/=i;
+                        N /= i;
                     }
                 }
-                for (int i=0;i<prime.size();i++)
-                {
-                    System.out.println("PRIME NUMBER "+prime.get(i));
+                for (int i = 0; i < prime.size(); i++) {
+                    System.out.println("PRIME NUMBER " + prime.get(i));
                 }
-                if (N>2)
-                {
+                if (N > 2) {
                     System.out.println(N);
                 }
+            case 6:
+                System.out.println("WELCOME QUOTIENT & REMAINDER");
+                System.out.println("ENTER ANY DIVIDEND INTEGER VALUE");
+                int DIVIDEND = scan.nextInt();
+                System.out.println("ENTER DIVISOR INTEGER VALUE");
+                int DIVISOR = scan.nextInt();
+                double QUOTIENT = (double) DIVIDEND / DIVISOR;
+                int REMAINDER = DIVIDEND / DIVISOR;
+                System.out.println("QUOTIENT IS = " + QUOTIENT);
+                System.out.println("REMAINDER IS = " + REMAINDER);
             default:
 
         }
