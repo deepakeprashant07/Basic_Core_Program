@@ -6,6 +6,7 @@ public class BasicCoreProgram {
         System.out.println("1] WELCOME COIN PERCENTAGE");
         System.out.println("2] LEAP YEAR PROGRAM");
         System.out.println("3] POWER OF 2 PROGRAM");
+        System.out.println("4] HARMONIC NUMBER PROGRAM");
         System.out.println("ENTER SR NUMBER PROGRAM");
         int Number = scan.nextInt();
         switch (Number) {
@@ -54,6 +55,22 @@ public class BasicCoreProgram {
                     System.out.println(power + " IS LEAP YEAR");
                 } else {
                     System.out.println(power + " IS NOT LEAP YEAR");
+                }
+            case 4:
+                System.out.println("WELCOME TO HARMONIC NUMBER ");
+                System.out.println("ENTER HARMONIC Nth NUMBER");
+                int Number_Nth = scan.nextInt();
+                if (Number_Nth != 0) {
+                    double total = 0.0, sum = 0.0;
+                    while (Number_Nth > 0) {
+                        total = total + (double) 1 / Number_Nth;
+                        System.out.print("   1/" + Number_Nth + " = " + total);
+                        Number_Nth--;
+                    }
+                    System.out.println("\n   TOTAL SUM OF HARMONIC SERIES IS = " + total);
+
+                } else {
+                    System.out.println("RESULT " + Number_Nth + " BECASUE 1/0 =" + Number_Nth);
                 }
 
         }
