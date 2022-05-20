@@ -10,6 +10,7 @@ public class BasicCoreProgram {
         System.out.println("4] HARMONIC NUMBER PROGRAM");
         System.out.println("5] PRIME FACTORIZATION PROGRAM");
         System.out.println("6] COMPUTE QUOTIENT & REMAINDER");
+        System.out.println("7] SWAP TWO NUMBER");
         System.out.println("ENTER SR NUMBER PROGRAM");
         int Number = scan.nextInt();
         switch (Number) {
@@ -60,6 +61,7 @@ public class BasicCoreProgram {
                 } else {
                     System.out.println(power + " IS NOT LEAP YEAR");
                 }
+                break;
             case 4:
                 System.out.println("WELCOME TO HARMONIC NUMBER ");
                 System.out.println("ENTER HARMONIC Nth NUMBER");
@@ -76,6 +78,7 @@ public class BasicCoreProgram {
                 } else {
                     System.out.println("RESULT " + Number_Nth + " BECASUE 1/0 =" + Number_Nth);
                 }
+                break;
             case 5:
                 System.out.println("ENTER THE N VALUE");
                 int N = scan.nextInt();
@@ -97,6 +100,7 @@ public class BasicCoreProgram {
                 if (N > 2) {
                     System.out.println(N);
                 }
+                break;
             case 6:
                 System.out.println("WELCOME QUOTIENT & REMAINDER");
                 System.out.println("ENTER ANY DIVIDEND INTEGER VALUE");
@@ -107,6 +111,20 @@ public class BasicCoreProgram {
                 int REMAINDER = DIVIDEND / DIVISOR;
                 System.out.println("QUOTIENT IS = " + QUOTIENT);
                 System.out.println("REMAINDER IS = " + REMAINDER);
+                break;
+            case 7:
+                System.out.println("WELCOME TO SWAP TWO NUMBER");
+                System.out.println("ENTER ANY INTEGER VALUE");
+                int NUM = scan.nextInt();
+                System.out.println("ENTER NEXT INTEGER VALUE");
+                int NUM2 = scan.nextInt();
+                System.out.println("BEFORE SWAPPING :: FIRST_INPUT = "+NUM+"  SECOND_INPUT = "+NUM2);
+                int TEMP=0;
+                TEMP=NUM;
+                NUM=NUM2;
+                NUM2=TEMP;
+                System.out.println("AFTER SWAPPING :: FIRST_INPUT = "+NUM+"  SECOND_INPUT = "+NUM2);
+                break;
             default:
 
         }
