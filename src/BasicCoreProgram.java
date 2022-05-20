@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BasicCoreProgram {
@@ -7,6 +8,7 @@ public class BasicCoreProgram {
         System.out.println("2] LEAP YEAR PROGRAM");
         System.out.println("3] POWER OF 2 PROGRAM");
         System.out.println("4] HARMONIC NUMBER PROGRAM");
+        System.out.println("5] PRIME FACTORIZATION PROGRAM");
         System.out.println("ENTER SR NUMBER PROGRAM");
         int Number = scan.nextInt();
         switch (Number) {
@@ -52,6 +54,7 @@ public class BasicCoreProgram {
                     a++;
                 }
                 if (table2 % 4 == 0) {
+
                     System.out.println(power + " IS LEAP YEAR");
                 } else {
                     System.out.println(power + " IS NOT LEAP YEAR");
@@ -61,7 +64,7 @@ public class BasicCoreProgram {
                 System.out.println("ENTER HARMONIC Nth NUMBER");
                 int Number_Nth = scan.nextInt();
                 if (Number_Nth != 0) {
-                    double total = 0.0, sum = 0.0;
+                    double total = 0.0;
                     while (Number_Nth > 0) {
                         total = total + (double) 1 / Number_Nth;
                         System.out.print("   1/" + Number_Nth + " = " + total);
@@ -72,6 +75,32 @@ public class BasicCoreProgram {
                 } else {
                     System.out.println("RESULT " + Number_Nth + " BECASUE 1/0 =" + Number_Nth);
                 }
+            case 5:
+                System.out.println("ENTER THE N VALUE");
+                int N = scan.nextInt();
+                ArrayList<Integer> prime=new ArrayList<>();
+                while (N % 2 == 0) {
+                    N /= 2;
+                    prime.add(2);
+                }
+                System.out.println("");
+                for (int i = 3; i <= N; i+= 2)
+                {
+                    while (N%i==0)
+                    {
+                        prime.add(i);
+                        N/=i;
+                    }
+                }
+                for (int i=0;i<prime.size();i++)
+                {
+                    System.out.println("PRIME NUMBER "+prime.get(i));
+                }
+                if (N>2)
+                {
+                    System.out.println(N);
+                }
+            default:
 
         }
     }
