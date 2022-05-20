@@ -5,6 +5,8 @@ public class BasicCoreProgram {
         Scanner scan =new Scanner(System.in);
         System.out.println("1] WELCOME COIN PERCENTAGE");
         System.out.println("2] LEAP YEAR PROGRAM");
+        System.out.println("3] POWER OF 2 PROGRAM");
+        System.out.println("ENTER SR NUMBER PROGRAM");
         int Number= scan.nextInt();
         switch (Number)
         {
@@ -24,7 +26,7 @@ public class BasicCoreProgram {
                         Tail_Counter+=1;
                     }
                 }
-                float Head_Percentage=(Head_Counter*100)/Through;
+                float Head_Percentage=(Tail_Counter/Through)*100;
                 float Tail_Percentage=(Tail_Counter*100)/Through;
                 System.out.println("HEAD PERCENTAGE = "+Head_Percentage+"%");
                 System.out.println("TAIL PERCENTAGE = "+Tail_Percentage+"%");
@@ -41,6 +43,20 @@ public class BasicCoreProgram {
                 {
                     System.out.println(Year+ " IS NOT LEAP YEAR");
                 }
+                break;
+            case 3:
+                System.out.println("Welcome TO Command Line Argument");
+                int X = Integer.parseInt(args[0]);
+                double power = Math.pow(2, X);
+                System.out.println("Command Line Argument Value is "+X);
+                int table2=2;
+                int i=1;
+                while (table2 <= power) {
+                        System.out.println(i+"] Table Of The Power 2 = " + table2 + " Equal To 2^N" + (int)power);
+                        table2 = table2 * 2;
+                        i++;
+                    }
+
         }
     }
 }
