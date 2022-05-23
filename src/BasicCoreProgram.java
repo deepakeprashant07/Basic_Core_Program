@@ -12,6 +12,7 @@ public class BasicCoreProgram {
         System.out.println("6] COMPUTE QUOTIENT & REMAINDER");
         System.out.println("7] SWAP TWO NUMBER");
         System.out.println("8] VOWEL OR CONSTANT ALPHABET ");
+        System.out.println("9] LARGEST AMONG THREE NUMBER");
         System.out.println("ENTER SR NUMBER PROGRAM");
         int Number = scan.nextInt();
         switch (Number) {
@@ -134,6 +135,17 @@ public class BasicCoreProgram {
                     System.out.println(ch + " IS VOWEL ");
                 else
                     System.out.println(ch + " IS CONSTANT");
+            case 9:
+                System.out.println("WELCOME LARGEST AMONG THREE NUMBER");
+                System.out.println("ENTER FIRST NUMBER");
+                int x = scan.nextInt();
+                System.out.println("ENTER SECOND NUMBER");
+                int y = scan.nextInt();
+                System.out.println("ENTER THIRD NUMBER");
+                int z = scan.nextInt();
+                int temp = x > y ? x : y;
+                int largest = temp > z ? temp : z;
+                System.out.println("LARGEST NUMBER IS = " +largest);
             default:
         }
     }
