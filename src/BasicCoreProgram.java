@@ -11,6 +11,7 @@ public class BasicCoreProgram {
         System.out.println("5] PRIME FACTORIZATION PROGRAM");
         System.out.println("6] COMPUTE QUOTIENT & REMAINDER");
         System.out.println("7] SWAP TWO NUMBER");
+        System.out.println("8] VOWEL OR CONSTANT ALPHABET ");
         System.out.println("ENTER SR NUMBER PROGRAM");
         int Number = scan.nextInt();
         switch (Number) {
@@ -28,7 +29,7 @@ public class BasicCoreProgram {
                         Tail_Counter += 1;
                     }
                 }
-                float Head_Percentage = (Tail_Counter * 100) * Through;
+                float Head_Percentage = (Head_Counter * 100) * Through;
                 float Tail_Percentage = (Tail_Counter * 100) / Through;
                 System.out.println("HEAD PERCENTAGE = " + Head_Percentage + "%");
                 System.out.println("TAIL PERCENTAGE = " + Tail_Percentage + "%");
@@ -118,15 +119,22 @@ public class BasicCoreProgram {
                 int NUM = scan.nextInt();
                 System.out.println("ENTER NEXT INTEGER VALUE");
                 int NUM2 = scan.nextInt();
-                System.out.println("BEFORE SWAPPING :: FIRST_INPUT = "+NUM+"  SECOND_INPUT = "+NUM2);
-                int TEMP=0;
-                TEMP=NUM;
-                NUM=NUM2;
-                NUM2=TEMP;
-                System.out.println("AFTER SWAPPING :: FIRST_INPUT = "+NUM+"  SECOND_INPUT = "+NUM2);
+                System.out.println("BEFORE SWAPPING :: FIRST_INPUT = " + NUM + "  SECOND_INPUT = " + NUM2);
+                int TEMP = 0;
+                TEMP = NUM;
+                NUM = NUM2;
+                NUM2 = TEMP;
+                System.out.println("AFTER SWAPPING :: FIRST_INPUT = " + NUM + "  SECOND_INPUT = " + NUM2);
                 break;
+            case 8:
+                System.out.println("WELCOME VOWEL AND CONSTANT PROGRAM");
+                System.out.println("ENTER ANY ALPHABETICAL CHARACTER");
+                char ch = scan.next().charAt(0);
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                    System.out.println(ch + " IS VOWEL ");
+                else
+                    System.out.println(ch + " IS CONSTANT");
             default:
-
         }
     }
 }
